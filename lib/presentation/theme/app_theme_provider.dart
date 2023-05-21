@@ -20,7 +20,7 @@ class _AppThemeProviderState extends State<AppThemeProvider> {
     });
   }
 
-  ThemeMode get themeMode => _mode ?? ThemeMode.system;
+  ThemeMode get themeMode => _mode ?? ThemeMode.dark;
 
   bool get isDark => Theme.of(context).brightness == ThemeMode.dark;
 

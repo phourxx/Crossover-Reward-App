@@ -49,7 +49,7 @@ class AppTransactionItemListTile extends StatelessWidget {
                 ),
                 if(transaction.bird) ...[
                   Gap(4.w),
-                  Hero(tag: transaction.id, child: SvgPicture.asset('bird'.svg))
+                  SvgPicture.asset('bird'.svg)
                 ],
                 const Spacer(),
                 AppText(
