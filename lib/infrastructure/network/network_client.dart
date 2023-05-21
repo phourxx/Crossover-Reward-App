@@ -2,8 +2,8 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:chopper/chopper.dart';
+import 'package:crossover_reward_app/app.dart';
 import 'package:crossover_reward_app/core/app/DTOs/error_response/error_response.dart';
-import 'package:crossover_reward_app/core/app/api_urls.dart';
 import 'package:crossover_reward_app/core/domain/entities/reward/reward.dart';
 import 'package:crossover_reward_app/core/domain/entities/transaction/transaction.dart';
 import 'package:flutter/material.dart';
@@ -81,7 +81,7 @@ class SerializableConverter extends JsonConverter {
 class NetworkClient extends ChopperClient {
   NetworkClient()
       : super(
-          baseUrl: Uri.parse(ApiUrls.baseUrl),
+          baseUrl: Uri.parse(appConfig.baseUrl),
           converter: SerializableConverter(),
           errorConverter: SerializableErrorConverter(),
           interceptors: [
